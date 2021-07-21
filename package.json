@@ -1,0 +1,22 @@
+{
+  "name": "tetris",
+  "productName": "Tetris",
+  "version": "1.0.0",
+  "description": "Tetris for desktop",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --exec electron . -e .js,html,css",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --asar --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Tetris\"",
+    "package-linux": "electron-packager . --overwrite --asar --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=false --out=release-builds"
+  },
+  "author": "Michal-W-dev",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^13.0.1",
+    "electron-packager": "^15.2.0",
+    "nodemon": "^2.0.7"
+  }
+}
